@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  /* display: flex; */
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ffc6c6;
+  justify-content: center;
+  text-align: center;
+}
+
+.navBar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 18px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(62, 216, 165);
+}
+
+.header {
+  width: 100%;
+  background-color: #6b6b6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.page {
+  /* padding: 64px 0px 0px 234px; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.mainContainer {
+  gap: 98px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 768px) {
+  .mainContainer {
+    gap: 84px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .mainContainer {
+    gap: 64px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.container {
+  background-color: rgb(131, 110, 64);
+  display: grid;
+  border-radius: 12px;
+  border: 2px solid white;
+  min-width: 320px;
+  height: 320px;
+}
