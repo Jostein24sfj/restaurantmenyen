@@ -77,8 +77,16 @@ function App() {
 
   return (
     <>
-      <nav className="navBar">Hovedrett</nav>
-      <header className="header">Restaurantmeny</header>
+      <div className="headerContent">
+        <header>
+          <h3>Restaurantmeny</h3>
+          <div className="headerButtons">
+            <button>Hovedrett</button>
+            <button>Forrett</button>
+            <button>Dessert</button>
+          </div>
+        </header>
+      </div>
 
       <div className="page">
         <main className="mainContainer">

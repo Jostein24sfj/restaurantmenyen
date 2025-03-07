@@ -16,22 +16,12 @@ body {
   text-align: center;
 }
 
-.navBar {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 18px;
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: rgb(62, 216, 165);
-}
-
-.header {
+.headerContent {
   width: 100%;
+  height: 64px;
   background-color: #6b6b6b;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 24px;
   font-weight: 500;
@@ -39,11 +29,12 @@ body {
 }
 
 .page {
-  /* padding: 64px 0px 0px 234px; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  padding: 64px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .mainContainer {
   gap: 98px;
   display: grid;
@@ -70,4 +61,31 @@ body {
   border: 2px solid white;
   min-width: 320px;
   height: 320px;
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center; */
+  gap: 12px;
+}
+
+button {
+  width: 112px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ef0000;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

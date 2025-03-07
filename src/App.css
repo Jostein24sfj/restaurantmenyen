@@ -3,7 +3,4 @@
   /* margin: 0 auto; */
   /* padding: 2rem; */
   /* text-align: center; */
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: 64px 1fr;
 }
