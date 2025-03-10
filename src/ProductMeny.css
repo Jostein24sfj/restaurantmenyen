@@ -11,21 +11,37 @@ body {
   /* display: flex; */
   min-height: 100vh;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #ffc6c6;
+  background-color: rgb(49, 46, 68);
   justify-content: center;
   text-align: center;
 }
 
-.headerContent {
+.headerImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+header {
   width: 100%;
-  height: 64px;
-  background-color: #6b6b6b;
+  height: 100px;
+  color: rgb(243, 245, 255);
+  /* text-shadow: 1px 1px 6px white; */
+  background-color: rgb(133, 142, 224);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: 1px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+header h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .page {
@@ -55,12 +71,15 @@ body {
 }
 
 .container {
-  background-color: rgb(131, 110, 64);
+  color: rgb(255, 237, 210);
+  background-color: rgb(133, 142, 224);
   display: grid;
   border-radius: 12px;
-  border: 2px solid white;
+  border: none;
+  box-shadow: 4px 4px rgb(79, 65, 162);
   min-width: 320px;
   height: 320px;
+  padding-top: 24px;
 }
 
 .headerButtons {
@@ -77,7 +96,7 @@ button {
   padding: 0.6em 1.2em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #ef0000;
+  background-color: rgb(233, 243, 255);
   cursor: pointer;
   transition: border-color 0.25s;
 }

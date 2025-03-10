@@ -79,6 +79,7 @@ function App() {
     <>
       <div className="headerContent">
         <header>
+          <img className="headerImg" src="headerLogo.jpg" alt="" />
           <h3>Restaurantmeny</h3>
           <div className="headerButtons">
             <button>Hovedrett</button>
