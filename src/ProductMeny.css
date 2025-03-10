@@ -52,20 +52,20 @@ header h3 {
 }
 
 .mainContainer {
-  gap: 98px;
+  gap: 128px;
   display: grid;
   grid-template-columns: 1fr;
 }
 @media screen and (min-width: 768px) {
   .mainContainer {
-    gap: 84px;
+    gap: 100px;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1080px) {
   .mainContainer {
-    gap: 64px;
+    gap: 98px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -77,9 +77,10 @@ header h3 {
   border-radius: 12px;
   border: none;
   box-shadow: 4px 4px rgb(79, 65, 162);
-  min-width: 320px;
-  height: 320px;
+  min-width: 300px;
+  height: 300px;
   padding-top: 24px;
+  font-weight: 500;
 }
 
 .headerButtons {
@@ -102,9 +103,6 @@ button {
 }
 
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: rgb(245, 247, 255);
+  background-color: rgb(133, 142, 224);
 }

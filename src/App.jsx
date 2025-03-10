@@ -1,7 +1,10 @@
 import ProductMeny from "./ProductMeny.jsx";
 import "./App.css";
+import { useState } from "react";
 
-function App() {
+export default function App() {
+  const [selectedCategory, setSelectedCategory] = useState("Alle");
+
   const meny = [
     {
       id: 1,
@@ -75,29 +78,48 @@ function App() {
     },
   ];
 
+  const filteredMeny = selectedCategory
+    ? meny.filter((item) => item.kategori === selectedCategory)
+    : [];
+
   return (
     <>
       <div className="headerContent">
         <header>
           <img className="headerImg" src="headerLogo.jpg" alt="" />
           <h3>Restaurantmeny</h3>
-          <div className="headerButtons">
-            <button>Hovedrett</button>
-            <button>Forrett</button>
-            <button>Dessert</button>
+          <div className="headerButtons" id="headerBtn">
+            <button onClick={() => setSelectedCategory("Hovedrett")}>
+              Hovedrett
+            </button>
+            <button onClick={() => setSelectedCategory("Forrett")}>
+              Forrett
+            </button>
+            <button onClick={() => setSelectedCategory("Dessert")}>
+              Dessert
+            </button>
+            <button onClick={() => setSelectedCategory("Alle")}>
+              Vis alle
+            </button>
           </div>
         </header>
       </div>
 
       <div className="page">
         <main className="mainContainer">
+          {filteredMeny.map((product) => (
+            <ProductMeny key={product.id} data={product} />
+          ))}
+        </main>
+      </div>
+
+      {/* <div className="page">
+        <main className="mainContainer">
           {meny.map((product) => (
             <ProductMeny data={product} />
           ))}
         </main>
-      </div>
+      </div> */}
     </>
   );
 }
-
-export default App;
