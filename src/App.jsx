@@ -3,7 +3,11 @@ import "./App.css";
 import { useState } from "react";
 
 export default function App() {
-  const [selectedCategory, setSelectedCategory] = useState("Alle");
+  const [dishes, setDishes] = useState([]);
+
+  const filteredMeny = (kategori) => {
+    setDishes(meny.filter((item) => item.kategori === kategori));
+  };
 
   const meny = [
     {
@@ -78,10 +82,6 @@ export default function App() {
     },
   ];
 
-  const filteredMeny = selectedCategory
-    ? meny.filter((item) => item.kategori === selectedCategory)
-    : [];
-
   return (
     <>
       <div className="headerContent">
@@ -89,25 +89,17 @@ export default function App() {
           <img className="headerImg" src="headerLogo.jpg" alt="" />
           <h3>Restaurantmeny</h3>
           <div className="headerButtons" id="headerBtn">
-            <button onClick={() => setSelectedCategory("Hovedrett")}>
-              Hovedrett
-            </button>
-            <button onClick={() => setSelectedCategory("Forrett")}>
-              Forrett
-            </button>
-            <button onClick={() => setSelectedCategory("Dessert")}>
-              Dessert
-            </button>
-            <button onClick={() => setSelectedCategory("Alle")}>
-              Vis alle
-            </button>
+            <button onClick={() => filteredMeny("Hovedrett")}>Hovedrett</button>
+            <button onClick={() => filteredMeny("Forrett")}>Forrett</button>
+            <button onClick={() => filteredMeny("Dessert")}>Dessert</button>
+            <button onClick={() => filteredMeny("Alle")}>Vis alle</button>
           </div>
         </header>
       </div>
 
       <div className="page">
         <main className="mainContainer">
-          {filteredMeny.map((product) => (
+          {(dishes.length < 1 ? meny : dishes).map((product) => (
             <ProductMeny key={product.id} data={product} />
           ))}
         </main>
